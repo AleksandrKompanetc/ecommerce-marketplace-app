@@ -15,6 +15,10 @@ const Header = () => {
         <input type="text" placeholder='Type here...' />
         <Search />
       </div>
+
+      <div>
+        <button>Login</button>
+      </div>
     </div>
   );
 };
