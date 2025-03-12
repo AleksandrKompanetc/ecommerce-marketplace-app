@@ -1,8 +1,21 @@
+import React from 'react'
+import Link from "next/link";
+import { Search } from 'lucide-react';
+
 const Header = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 bg-gray shadow-md z-50">
-      Header
-    </header>
+    <div>
+      {/* LOGO */}
+      <Link href={'/'}>
+        <span>MegaShop</span>
+        <span>Marketplace</span>
+      </Link>
+
+      <div>
+        <input type="text" placeholder='Type here...' />
+        <Search />
+      </div>
+    </div>
   );
 };
 
