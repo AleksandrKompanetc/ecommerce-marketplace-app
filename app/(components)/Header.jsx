@@ -18,6 +18,7 @@ const Header = () => {
 
       <div>
         <button>Login</button>
+        <button>Sign Up</button>
       </div>
     </div>
   );
