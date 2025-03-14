@@ -16,9 +16,9 @@ const Header = () => {
         <Search className='cursor-pointer rounded-full h-10 w-11 p-2.5 m-1' />
       </div>
 
-      <div>
-        <button>Login</button>
-        <button>Sign Up</button>
+      <div className='flex gap-5'>
+        <button className='border-none transparent'>Login</button>
+        <button className='shadow-none'>Sign Up</button>
       </div>
     </div>
   );
