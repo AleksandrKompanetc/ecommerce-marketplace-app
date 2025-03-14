@@ -2,7 +2,11 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <div>Hero</div>
+    <section className='max-padd-container'>
+      <div>
+        <div>Elevate your</div>
+      </div>
+    </section>
   )
 }
 
