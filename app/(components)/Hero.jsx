@@ -13,6 +13,11 @@ const Hero = () => {
             <div></div>
             <div></div>
             </Link>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+              Tempore placeat ipsa veniam ullam quasi quo, recusandae iste 
+              consequatur, aspernatur ipsum ad nemo.
+            </p>
           </div>
         </div>
       </div>
