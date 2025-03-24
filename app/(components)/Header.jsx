@@ -4,9 +4,9 @@ import { Search } from 'lucide-react';
 
 const Header = () => {
   return (
-    <div className='max-padd-container flexBetween py-2'>
+    <div className='flex justify-between items-center width-full max-padd-container px-10 py-4'>
       {/* LOGO */}
-      <Link href={'/'} className='uppercase flex flex-col'>
+      <Link href={'/'} className='flex flex-col justify-between gap-2'>
         <span className='relative top-2'>MegaShop</span>
         <span>Marketplace</span>
       </Link>
