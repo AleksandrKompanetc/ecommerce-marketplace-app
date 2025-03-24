@@ -3,7 +3,7 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <section className='max-padd-container'>
+    <section className='max-padd-container px-10 py-4'>
       <div>
         <div>
           <h2>Elevate your wardrobe with trendy fashion from <span>Shop</span></h2>
