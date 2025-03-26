@@ -5,17 +5,16 @@ import { Menu } from 'lucide-react';
 
 const Header = () => {
   return (
-    <header className='flex justify-between items-center width-full max-padd-container px-10 py-4'>
+    <header className='sticky top-0 z-50 bg-white shadow-md'>
       <div>
         {/* LOGO */}
-        <Link href={'/'} className='flex flex-col justify-between gap-2'>
+        <Link href={'/'} className='text-xl font-bold text-gray-900'>
           <span className='relative top-2'>MegaShop</span>
           <span>Marketplace</span>
         </Link>
 
-        <nav className='hidden md:flex rounded-full bg-white w-[444px] pl-6 gray'>
-          <input type="text" placeholder='Type here...' className='bg-transparent w-full outline-none text-14px' />
-          <Search className='cursor-pointer rounded-full h-10 w-11 p-2.5 m-1' />
+        <nav className='hidden md:flex md:gap-6'>
+          <Link href={'/'} className='text-gray-900'>Home</Link>
         </nav>
 
         <div className='flex items-center gap-4'>
