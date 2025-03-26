@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from "next/link";
-import { Search } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Menu } from 'lucide-react';
 
 const Header = () => {
   return (
@@ -17,9 +18,12 @@ const Header = () => {
           <Search className='cursor-pointer rounded-full h-10 w-11 p-2.5 m-1' />
         </nav>
 
-        <div className='flex gap-15'>
-          <button className='border-none transparent'>Login</button>
-          <button className='shadow-none'>Sign Up</button>
+        <div className='flex items-center gap-4'>
+          <Button variant={'outline'} className='hidden md:inline-block'>Log In</Button>
+          <Button variant={'outline'} className='hidden md:inline-block'>Sign Up</Button>
+          <button className=''>
+            <Menu className='w-6 h-6 text-gray-900'/>
+          </button>
         </div>
       </div>
     </header>
