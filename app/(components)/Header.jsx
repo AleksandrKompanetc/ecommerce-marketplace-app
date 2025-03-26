@@ -14,7 +14,10 @@ const Header = () => {
         </Link>
 
         <nav className='hidden md:flex md:gap-6'>
-          <Link href={'/'} className='text-gray-900'>Home</Link>
+          <Link href={'/shop'} className='text-gray-700 hover:text-black transition-all'>Shop</Link>
+          <Link href={'/categories'} className='text-gray-900'>Categories</Link>
+          <Link href={'/about'} className='text-gray-900'>About</Link>
+          <Link href={'/contact'} className='text-gray-900'>Contact</Link>
         </nav>
 
         <div className='flex items-center gap-4'>
