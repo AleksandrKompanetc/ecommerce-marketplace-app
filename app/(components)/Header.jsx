@@ -15,9 +15,9 @@ const Header = () => {
 
         <nav className='hidden md:flex md:gap-6'>
           <Link href={'/shop'} className='text-gray-700 hover:text-black transition-all'>Shop</Link>
-          <Link href={'/categories'} className='text-gray-900'>Categories</Link>
-          <Link href={'/about'} className='text-gray-900'>About</Link>
-          <Link href={'/contact'} className='text-gray-900'>Contact</Link>
+          <Link href={'/categories'} className='text-gray-700 hover:text-black transition-all'>Categories</Link>
+          <Link href={'/about'} className='text-gray-700 hover:text-black transition-all'>About</Link>
+          <Link href={'/contact'} className='text-gray-700 hover:text-black transition-all'>Contact</Link>
         </nav>
 
         <div className='flex items-center gap-4'>
