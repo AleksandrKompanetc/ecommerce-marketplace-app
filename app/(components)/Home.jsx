@@ -17,22 +17,12 @@ const Home = () => {
   return (
     <div className='container mx-auto p-6'>
       <h1 className='text-2xl font-bold mb-4'>MarketPlace</h1>
-      <div >
-        <div>
-          <h2>Elevate your wardrobe with trendy fashion from <span>Shop</span></h2>
+      <div className='grid grid-cols-3 gap-4'>
+        {products.map((product) => (
           <div>
-            <Link href='/products'>
-            <span>Latest Product</span>
-            <div></div>
-            <div></div>
-            </Link>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-              Tempore placeat ipsa veniam ullam quasi quo, recusandae iste 
-              consequatur, aspernatur ipsum ad nemo.
-            </p>
+            
           </div>
-        </div>
+        ))}
       </div>
     </div>
   )
