@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-const Hero = () => {
+export default function Home() {
   return (
     <section className='max-padd-container px-10 py-4'>
       <div>
