@@ -10,9 +10,14 @@ const products = [
 const Home = () => {
   const [cart, setCart] = useState({})
 
+  const addToCart = (product) => {
+    setCart([...cart, product])
+  }
+
   return (
     <div className='container mx-auto p-6'>
-      <div>
+      <h1 className='text-2xl font-bold mb-4'>MarketPlace</h1>
+      <div >
         <div>
           <h2>Elevate your wardrobe with trendy fashion from <span>Shop</span></h2>
           <div>
