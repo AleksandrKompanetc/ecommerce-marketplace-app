@@ -1,9 +1,17 @@
+import { useState } from 'react'
 import Link from 'next/link'
-import React from 'react'
 
-export default function Home() {
+const products = [
+  {id: '1', name: 'IPhone 14', price: 999, image: '/iphone.jpg'},
+  {id: '2', name: 'MacBook Pro', price: 1999, image: '/macbook.jpg'},
+  {id: '3', name: 'AirPods Pro', price: 249, image: '/airpods.jpg'}
+]
+
+const Home = () => {
+  const [cart, setCart] = useState({})
+
   return (
-    <section className='max-padd-container px-10 py-4'>
+    <div className='container mx-auto p-6'>
       <div>
         <div>
           <h2>Elevate your wardrobe with trendy fashion from <span>Shop</span></h2>
@@ -21,8 +29,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 
-export default Hero
+export default Home
