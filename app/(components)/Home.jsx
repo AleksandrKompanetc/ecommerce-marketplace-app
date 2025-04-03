@@ -23,9 +23,17 @@ const Home = () => {
             <img src={product.image} alt={product.name} className='w-full h-40 object-cover' />
             <h2 className='text-lg font-semibold mt-2'>{product.name}</h2>
             <p className='text-gray-600'>${product.price}</p>
-            <button></button>
+            <button 
+              onClick={() => addToCart(product)}
+              className='mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600'>
+              Add to basket
+            </button>
           </div>
         ))}
+      </div>
+      <div className='mt-6 p-4 border-t'>
+        <h2 className='text-xl font-bold'>Basket</h2>
+        
       </div>
     </div>
   )
