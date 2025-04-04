@@ -9,6 +9,8 @@ const products = [
 
 const Home = () => {
   const [cart, setCart] = useState({})
+  const [search, setSearch] = useState("");
+  const [categoryFilter, setCategoryFilter] = useState("all");
 
   const addToCart = (product) => {
     setCart([...cart, product])
