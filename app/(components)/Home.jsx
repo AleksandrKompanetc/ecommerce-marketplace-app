@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Link from 'next/link'
+import Header from './Header'
 
 const products = [
   { id: '1', name: 'IPhone 14', price: 999, image: '/iphone.jpg' },
@@ -33,6 +34,7 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="min-h-screen bg-gray-100">
+        <Header />
         <div className='container mx-auto p-6'>
           <h1 className='text-2xl font-bold mb-4'>MarketPlace</h1>
           <div className='grid grid-cols-3 gap-4'>
