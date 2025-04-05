@@ -35,33 +35,31 @@ const Home = () => {
       </Head>
       <main className="min-h-screen bg-gray-100">
         <Header />
-        <div className='container mx-auto p-6'>
-          <h1 className='text-2xl font-bold mb-4'>MarketPlace</h1>
-          <div className='grid grid-cols-3 gap-4'>
-            {products.map((product) => (
-              <div key={product.id} className='border p-4 rounded-lg shadow'>
-                <img src={product.image} alt={product.name} className='w-full h-40 object-cover' />
-                <h2 className='text-lg font-semibold mt-2'>{product.name}</h2>
-                <p className='text-gray-600'>${product.price}</p>
-                <button
-                  onClick={() => addToCart(product)}
-                  className='mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600'>
-                  Add to basket
-                </button>
-              </div>
-            ))}
+        <div className="max-w-7xl mx-auto px-4 py-8">
+          <div className="flex flex-col sm:flex-row justify-between gap-4 mb-6">
+            <input
+              type="text"
+              placeholder="Search products..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="w-full sm:w-1/2 p-2 border rounded"
+            />
+            <select
+              value={categoryFilter}
+              onChange={(e) => setCategoryFilter(e.target.value)}
+              className="p-2 border rounded"
+            >
+              {uniqueCategories.map((cat) => (
+                <option key={cat} value={cat}>
+                  {cat.charAt(0).toUpperCase() + cat.slice(1)}
+                </option>
+              ))}
+            </select>
           </div>
-          <div className='mt-6 p-4 border-t'>
-            <h2 className='text-xl font-bold'>Basket</h2>
-            {cart.length === 0 ? (
-              <p className='text-gray-500'>Cart is empty</p>
-            ) : (
-              <ul>
-                {cart.map((item, index) => (
-                  <li key={index} className='border-b py-2'>{item.name} - ${item.price}</li>
-                ))}
-              </ul>
-            )}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {filteredProducts.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
           </div>
         </div>
       </main>
