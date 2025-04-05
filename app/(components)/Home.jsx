@@ -19,9 +19,9 @@ const Home = () => {
     return matchesSearch && matchesCategory;
   });
 
-  const addToCart = (product) => {
-    setCart([...cart, product])
-  }
+  // const addToCart = (product) => {
+  //   setCart([...cart, product])
+  // }
 
   const uniqueCategories = ["all", ...new Set(products.map((p) => p.category))];
 
