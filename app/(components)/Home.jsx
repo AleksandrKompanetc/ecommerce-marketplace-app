@@ -22,6 +22,8 @@ const Home = () => {
     setCart([...cart, product])
   }
 
+  const uniqueCategories = ["all", ...new Set(products.map((p) => p.category))];
+
   return (
     <>
       <Head>
