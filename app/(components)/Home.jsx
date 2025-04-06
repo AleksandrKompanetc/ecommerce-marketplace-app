@@ -11,7 +11,13 @@ const products = [
 const Home = () => {
   const [search, setSearch] = useState("")
   const [categoryFilter, setCategoryFilter] = useState('all')
-  
+
+  const filteredProducts = products.filter((product) => {
+    const matchesSearch = product.name.toLowerCase().includes(search.toLowerCase())
+    const matchesCategory = categoryFilter === 'all' || product.category === categoryFilter
+    return matchesSearch || matchesCategory
+  })
+
   return (
     <>
       <Head>
@@ -21,6 +27,7 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className='min-h-screen bg-gray-100'>
+        <Header />
         <div className='max-w-7xl mx-auto px-4 py-8'>
           <div className='flex flex-col sm:flex-row justify-between gap-4 mb-6'>
             <input 
