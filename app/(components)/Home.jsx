@@ -28,7 +28,11 @@ const Home = () => {
               onClick={(e) => setSearch(e.target.value)}
               className='w-full sm:w-1/2 p-2 border rounded'
             />
-            <select name="" id=""></select>
+            <select>
+              value={categoryFilter}
+              onChange={(e) => setCategoryFilter(e.target.value)}
+              className='p-2 border rounded'
+            </select>
           </div>
         </div>
       </main>
