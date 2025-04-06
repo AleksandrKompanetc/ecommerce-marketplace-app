@@ -10,6 +10,8 @@ const products = [
 
 const Home = () => {
   const [search, setSearch] = useState("")
+  const [categoryFilter, setCategoryFilter] = useState('all')
+  
   return (
     <>
       <Head>
