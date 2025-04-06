@@ -18,6 +18,14 @@ const Home = () => {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <main className='min-h-screen bg-gray-100'>
+        <div className='max-w-7xl mx-auto px-4 py-8'>
+          <div className='flex flex-col sm:flex-row justify-between gap-4 mb-6'>
+            <input type="text" />
+            <select name="" id=""></select>
+          </div>
+        </div>
+      </main>
     </>
   )
 }
