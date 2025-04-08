@@ -9,6 +9,8 @@ const products = [
   { id: '3', name: 'AirPods Pro', price: 249, image: '/airpods.jpg' }
 ]
 
+const inter = Inter({ subsets: ["latin"] });
+
 const Home = () => {
   const [search, setSearch] = useState("")
   const [categoryFilter, setCategoryFilter] = useState('all')
