@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Header from './Header'
+import ProductCard from './ProductCard'
 
 const products = [
   { id: '1', name: 'IPhone 14', price: 999, image: '/iphone.jpg' },
@@ -53,6 +54,11 @@ const Home = () => {
               </option>
               ))}
             </select>
+          </div>
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+              {filteredProducts.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
           </div>
         </div>
       </main>
