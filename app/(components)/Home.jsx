@@ -39,10 +39,19 @@ const Home = () => {
               onClick={(e) => setSearch(e.target.value)}
               className='w-full sm:w-1/2 p-2 border rounded'
             />
-            <select>
+            <select 
               value={categoryFilter}
               onChange={(e) => setCategoryFilter(e.target.value)}
               className='p-2 border rounded'
+            >
+              {uniqueCategories.map((cat) => (
+                <option 
+                  key={cat}
+                  value={cat}
+              >
+                {cat.charAt(0).toUpperCase() = cat.slice(1)}
+              </option>
+              ))}
             </select>
           </div>
         </div>
