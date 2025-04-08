@@ -18,6 +18,8 @@ const Home = () => {
     return matchesSearch || matchesCategory
   })
 
+  const uniqueCategories = ["all", ...new Set(products.map((p) => p.category))];
+
   return (
     <>
       <Head>
