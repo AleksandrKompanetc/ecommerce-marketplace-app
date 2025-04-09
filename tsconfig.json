@@ -1,72 +1,27 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext",
-      "es2015",
-      "es2016",
-      "es2017",
-      "es2018",
-      "es2019",
-      "es2020",
-      "es2021",
-      "webworker"
-    ],
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "incremental": true,
-    "module": "esnext",
     "esModuleInterop": true,
-    "moduleResolution": "node",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": ["./*"],
-      "@components/*": ["./app/(components)/*"],
-      "@lib/*": ["./lib/*"],
-      "@utils/*": ["./utils/*"],
-      "@hooks/*": ["./hooks/*"],
-      "@types/*": ["./types/*"],
-      "@styles/*": ["./styles/*"],
-      "@context/*": ["./context/*"]
-    },
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictBindCallApply": true,
-    "strictPropertyInitialization": true,
-    "noFallthroughCasesInSwitch": true,
-    "allowUnreachableCode": false,
-    "noUncheckedIndexedAccess": true,
-    "baseUrl": "."
+      "@/*": ["./*"]
+    }
   },
-  "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.js",
-    "**/*.jsx",
-    "**/*.json"
-  ],
-  "exclude": [
-    "node_modules",
-    ".next",
-    "out",
-    "build",
-    "dist",
-    "coverage"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }
