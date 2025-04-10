@@ -36,6 +36,8 @@ const products = [
   },
 ]
 
+const uniqueCategories = ['all', ...new Set(products.map((p) => p.category))]
+
 export default function Home() {
   const [search, setSearch] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('all');
