@@ -70,10 +70,27 @@ export default function Home() {
             >
               {uniqueCategories.map((cat) => (
                 <option key={cat} value={cat}>
-                  {cat.charAt(0).toApperCase() + cat.slice(1)}
+                  {cat.charAt(0).toUpperCase() + cat.slice(1)}
                 </option>
               ))}
             </select>
+          </div>
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+            {filteredProducts.map((product) => (
+              <div key={product.id} className='bg-white rounded shadow p-4 hover:shadow-md transition'>
+                <Image 
+                  src={product.image}
+                  alt={product.name}
+                  width={300}
+                  height={200}
+                  className='rounded'
+                />
+                <h2 className='text-lg font-semibold mt-2'>{product.name}</h2>
+                <p className='text-sm text-gray-600'>{product.category}</p>
+                <p className='font-bold mt-1'>${product.price}</p>
+                <Link></Link>
+              </div>
+            ))}
           </div>
         </div>
       </main>
