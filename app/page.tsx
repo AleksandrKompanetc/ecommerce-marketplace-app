@@ -88,7 +88,9 @@ export default function Home() {
                 <h2 className='text-lg font-semibold mt-2'>{product.name}</h2>
                 <p className='text-sm text-gray-600'>{product.category}</p>
                 <p className='font-bold mt-1'>${product.price}</p>
-                <Link></Link>
+                <Link href={`/products/${product.id}`} className='text-blue-500 mt-2 inline-block'>
+                  View Details
+                </Link>
               </div>
             ))}
           </div>
