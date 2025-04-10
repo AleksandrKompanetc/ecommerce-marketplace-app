@@ -66,7 +66,11 @@ export default function Home() {
               onChange={(e) => setCategoryFilter(e.target.value)}
               className='p-2 border rounded'
             >
-              
+              {uniqueCategories.map((cat) => (
+                <option key={cat} value={cat}>
+                  {cat.charAt(0).toApperCase() + cat.slice(1)}
+                </option>
+              ))}
             </select>
           </div>
         </div>
