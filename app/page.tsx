@@ -54,6 +54,13 @@ export default function Home() {
         </header>
         <div className='max-w-7xl mx-auto px-4 py-8'>
           <div className='flex flex-col sm:flex-row justify-between gap-4 mb-6'>
+            <input 
+              type="text" 
+              placeholder='Search products'
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className='w-full sm:w-1/2 lg:w-1/3 p-2 border border-gray-300 rounded'
+            />
             
           </div>
         </div>
