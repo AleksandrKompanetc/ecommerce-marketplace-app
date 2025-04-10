@@ -61,7 +61,13 @@ export default function Home() {
               onChange={(e) => setSearch(e.target.value)}
               className='w-full sm:w-1/2 lg:w-1/3 p-2 border border-gray-300 rounded'
             />
-            
+            <select 
+              value={categoryFilter}
+              onChange={(e) => setCategoryFilter(e.target.value)}
+              className='p-2 border rounded'
+            >
+              
+            </select>
           </div>
         </div>
       </main>
