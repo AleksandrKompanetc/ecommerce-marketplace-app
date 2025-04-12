@@ -50,7 +50,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className='min-h-screen bg-gray-100'>
-        <header className='bg-white shadow p-4'>
+        <header className='flex justify-between items-center direction-row no-wrap bg-white shadow p-4'>
           <h1 className='text-2xl font-bold'>Next JS. Marketplace</h1>
           <nav>
             <Link href={'/'}>Home</Link>
