@@ -11,29 +11,22 @@ const products = [
     name: 'Wireless Headphones',
     category: 'Electronics',
     price: 59.99,
-    image: '/products/headphones.jpg',
-  },
-  {
-    id: 1,
-    name: 'Wireless Headphones',
-    category: 'electronics',
-    price: 59.99,
-    image: '/products/headphones.jpg',
+    image: 'headphones.jpg',
   },
   {
     id: 2,
     name: 'Mountain Bike',
-    category: 'sports',
-    price: 499.99,
-    image: '/products/bike.jpg',
+    category: 'electronics',
+    price: 59.99,
+    image: 'bike.jpg',
   },
   {
     id: 3,
-    name: 'Coffee Maker',
-    category: 'home',
-    price: 79.99,
-    image: '/products/coffeemacker.jpg',
-  },
+    name: 'Coffee Macker',
+    category: 'sports',
+    price: 499.99,
+    image: 'coffemacker.jpg',
+  }
 ]
 
 export default function Home() {
