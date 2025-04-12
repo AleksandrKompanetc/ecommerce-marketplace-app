@@ -11,21 +11,21 @@ const products = [
     name: 'Wireless Headphones',
     category: 'Electronics',
     price: 59.99,
-    image: 'headphones.jpg',
+    image: '/public/headphones.jpg',
   },
   {
     id: 2,
     name: 'Mountain Bike',
     category: 'electronics',
     price: 59.99,
-    image: 'bike.jpg',
+    image: '/public/bike.jpg',
   },
   {
     id: 3,
     name: 'Coffee Macker',
     category: 'sports',
     price: 499.99,
-    image: 'coffemacker.jpg',
+    image: '/public/coffemacker.jpg',
   }
 ]
 
