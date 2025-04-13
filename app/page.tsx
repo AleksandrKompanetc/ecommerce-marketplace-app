@@ -53,11 +53,11 @@ export default function Home() {
       <main className="min-h-screen bg-gray-100">
         <header className="flex justify-between items-center w-full bg-white shadow p-4">
           <h1 className="text-2xl font-bold">Next.js Marketplace</h1>
-          <nav className="flex gap-4">
-            <Link href="/" className="text-blue-600 hover:underline">Home</Link>
-            <Link href="/about" className="text-blue-600 hover:underline">About</Link>
-            <Link href="/contact" className="text-blue-600 hover:underline">Contact</Link>
-            <Link href="/products" className="text-blue-600 hover:underline">Products</Link>
+          <nav className="flex gap-10">
+            <Link href="/" className="text-gray-700 hover:text-blue-500 transition no-underline">Home</Link>
+            <Link href="/about" className="text-gray-700 hover:text-blue-500 transition no-underline">About</Link>
+            <Link href="/contact" className="text-gray-700 hover:text-blue-500 transition no-underline">Contact</Link>
+            <Link href="/products" className="text-gray-700 hover:text-blue-500 transition no-underline">Products</Link>
           </nav>
         </header>
 
