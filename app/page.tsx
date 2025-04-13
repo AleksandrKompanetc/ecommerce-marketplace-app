@@ -50,13 +50,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className='min-h-screen bg-gray-100'>
-        <header className='flex justify-between items-center direction-row no-wrap bg-white shadow p-4'>
+        <header className='flex justify-between items-center w-full bg-white shadow p-4'>
           <h1 className='text-2xl font-bold'>Next JS. Marketplace</h1>
-          <nav>
-            <Link href={'/'}>Home</Link>
-            <Link href={'/about'}>About</Link>
-            <Link href={'/contact'}>Contact</Link>
-            <Link href={'/products'}>Products</Link>
+          <nav className='flex gap-4 text-sm font-medium'>
+            <Link href='/' className='text-gray-700 hover:text-blue-500 transition'>Home</Link>
+            <Link href='/about' className='text-gray-700 hover:text-blue-500 transition'>About</Link>
+            <Link href='/contact' className='text-gray-700 hover:text-blue-500 transition'>Contact</Link>
+            <Link href='/products' className='text-gray-700 hover:text-blue-500 transition'>Products</Link>
           </nav>
         </header>
         <div className='max-w-7xl mx-auto px-4 py-8'>
