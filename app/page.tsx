@@ -7,10 +7,16 @@ export default async function Home() {
     limit: 5
   })
 
-  console.log(products)
   return (
     <div className="text-blue-500">
-     
+     <section>
+      <div>
+        <div>
+          <h2>Welcome to My Ecommerce</h2>
+          <p>Discover the latest products at the best prices.</p>
+        </div>
+      </div>
+     </section>
     </div>
   );
 }
