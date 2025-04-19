@@ -1,3 +1,3 @@
-export default Carousel = () => {
+export const Carousel = () => {
   return <div></div>
 }

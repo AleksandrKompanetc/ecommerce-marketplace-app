@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { stripe } from "@/lib/stripe";
 import { Button } from "@/components/ui/button";
+import { Carousel } from "@/components/carousel";
 import Link from "next/link";
 
 export default async function Home() {
@@ -23,7 +24,9 @@ export default async function Home() {
         <Image alt="Banner Image" width={450} height={450} src={products.data[0].images[0]} />
       </div>
      </section>
-     
+     <section>
+      <Carousel />
+     </section>
     </div>
   );
 }
