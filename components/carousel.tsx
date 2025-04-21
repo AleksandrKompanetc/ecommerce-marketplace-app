@@ -11,7 +11,7 @@ export const Carousel = ({products}: Props) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent((prev) => prev + 1)
+      setCurrent((prev) => prev + 1) % products.length
     }, 3000)
   }, [products.length])
 
