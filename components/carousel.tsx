@@ -1,5 +1,7 @@
+"use client"
+
 import Stripe from "stripe"
-import { Card } from "./ui/card"
+import { Card, CardContent } from "./ui/card"
 import { useEffect, useState } from "react"
 import Image from "next/image"
 
@@ -7,7 +9,7 @@ interface Props {
   products: Stripe.Product[]
 }
 
-export const Carousel = ({products}: Props) => {
+export const Carousel = ({ products }: Props) => {
   const [current, setCurrent] = useState<number>(0)
 
   useEffect(() => {
@@ -33,7 +35,10 @@ export const Carousel = ({products}: Props) => {
             objectFit="cover"
           />
         </div>
-  )}
-  </Card>
+      )}
+      <CardContent>
+
+      </CardContent>
+    </Card>
   )
 }
