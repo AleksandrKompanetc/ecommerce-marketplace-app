@@ -11,9 +11,15 @@ export const Carousel = ({products}: Props) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent((prev) => prev + 1) % products.length
+      setCurrent((prev) => (prev + 1) % products.length)
     }, 3000)
+
+    return () => clearInterval(interval)
   }, [products.length])
+
+  const currentProduct = products[current]
+
+  const price = currentProduct.default_price as Stripe.Price
 
   return <Card></Card>
 }
