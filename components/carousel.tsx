@@ -25,20 +25,23 @@ export const Carousel = ({ products }: Props) => {
   const price = currentProduct.default_price as Stripe.Price
 
   return (
-    <Card>
+    <Card className="relative overflow-hidden rounded-lg shadow-md border-gray-300">
       {currentProduct.images && currentProduct.images[0] && (
-        <div>
+        <div className="relative h-80 w-fill">
           <Image
             alt={currentProduct.name}
             src={currentProduct.images[0]}
             layout="fill"
             objectFit="cover"
+            className="transition-opacity duration-500 ease-in-out"
           />
         </div>
       )}
-      <CardContent>
-        <CardTitle>{currentProduct.name}</CardTitle>
-        {price && price.unit_amount && <p> ${(price.unit_amount / 100).toFixed(2)}</p>}
+      <CardContent className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50">
+        <CardTitle className="text-3xl font-bold text-white mb-2">{currentProduct.name}</CardTitle>
+        {price && price.unit_amount && (
+          <p className="text-xl text-white"> ${(price.unit_amount / 100).toFixed(2)}</p>
+          )}
       </CardContent>
     </Card>
   )
