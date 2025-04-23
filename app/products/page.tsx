@@ -7,6 +7,9 @@ export default async function ProductsPage() {
   })
 
   return (
-    <div>products</div>
+    <div>
+      <h1>All Products</h1>
+      <ProductList products={products.data} />
+    </div>
   )
 }
