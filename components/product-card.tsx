@@ -23,6 +23,7 @@ export const ProductCard = ({ product }: Props) => {
       )}
       <CardHeader>
         <CardTitle>{product.title}</CardTitle>
+        <CardContent></CardContent>
       </CardHeader>
     </Card>
   </Link>
