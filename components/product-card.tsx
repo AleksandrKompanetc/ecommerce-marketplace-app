@@ -21,6 +21,9 @@ export const ProductCard = ({ product }: Props) => {
           />
         </div>
       )}
+      <CardHeader>
+        <CardTitle>{product.title}</CardTitle>
+      </CardHeader>
     </Card>
   </Link>
 }
