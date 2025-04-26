@@ -8,9 +8,10 @@ interface Props {
 }
 
 export const ProductCard = ({ product }: Props) => {
+  const price = product.default_price as Stripe.Price
   return <Link href={"/products/1"}>
     <Card>
-    {product.images && product.images[0] && (
+      {product.images && product.images[0] && (
         <div className="relative h-80 w-full">
           <Image
             alt={product.name}
@@ -23,7 +24,11 @@ export const ProductCard = ({ product }: Props) => {
       )}
       <CardHeader>
         <CardTitle>{product.title}</CardTitle>
-        <CardContent></CardContent>
+        <CardContent>
+          {price && price.unit_amount && (
+            <p className="text-xl text-white"> ${(price.unit_amount / 100).toFixed(2)}</p>
+          )}
+        </CardContent>
       </CardHeader>
     </Card>
   </Link>
