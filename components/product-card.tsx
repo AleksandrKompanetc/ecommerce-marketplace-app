@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Stripe from "stripe"
-import { Card } from "./ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
 import Image from "next/image"
 import { Button } from "./ui/button"
 
@@ -25,7 +25,7 @@ export const ProductCard = ({ product }: Props) => {
       )}
       <CardHeader className="p-4">
         <CardTitle className="text-xl font-bold text-gray-800">
-          {product.title}
+          {product.name}
         </CardTitle>
         <CardContent>
           {product.description && (
