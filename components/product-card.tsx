@@ -23,13 +23,18 @@ export const ProductCard = ({ product }: Props) => {
           />
         </div>
       )}
-      <CardHeader>
-        <CardTitle>{product.title}</CardTitle>
+      <CardHeader className="p-4">
+        <CardTitle className="text-xl font-bold text-gray-800">
+          {product.title}
+        </CardTitle>
         <CardContent>
+          {product.description && (
+            <p className="text-gray-600 text-sm mb-2">{product.description}</p>
+          )}
           {price && price.unit_amount && (
             <p className="text-xl text-white"> ${(price.unit_amount / 100).toFixed(2)}</p>
           )}
-          <Button>View Details</Button>
+          <Button className="mt-4 bg-black text-white">View Details</Button>
         </CardContent>
       </CardHeader>
     </Card>
