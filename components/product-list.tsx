@@ -9,7 +9,12 @@ interface Props {
 export const ProductList = ({ products }: Props) => {
 
   const [searchTerm, setSearch] = useState<string>("")
-  
+
+  const filteredProducts = products.filter((product) => {
+    const term = searchTerm.toLowerCase()
+    const nameMatch = product.name.toLowerCase().includes(term)
+  })
+
   return (
     <div>
       <div>
