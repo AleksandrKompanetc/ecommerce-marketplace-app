@@ -13,6 +13,9 @@ export const ProductList = ({ products }: Props) => {
   const filteredProducts = products.filter((product) => {
     const term = searchTerm.toLowerCase()
     const nameMatch = product.name.toLowerCase().includes(term)
+    const descriptionMatch = product.description ? product.description.toLowerCase().includes(term) : false
+
+    return nameMatch || descriptionMatch
   })
 
   return (
@@ -22,7 +25,7 @@ export const ProductList = ({ products }: Props) => {
       </div>
 
       <ul>
-        {products.map((product, key) => {
+        {filteredProducts.map((product, key) => {
           return (
             <li key={key}>
               <ProductCard product={product} />
