@@ -1,3 +1,5 @@
+"use client"
+
 import Stripe from "stripe"
 import { ProductCard } from "./product-card"
 import { useState } from "react"
@@ -8,7 +10,7 @@ interface Props {
 
 export const ProductList = ({ products }: Props) => {
 
-  const [searchTerm, setSearch] = useState<string>("")
+  const [searchTerm, setSearchTerm] = useState<string>("")
 
   const filteredProducts = products.filter((product) => {
     const term = searchTerm.toLowerCase()
@@ -23,6 +25,8 @@ export const ProductList = ({ products }: Props) => {
       <div className="mb-6 flex justify-center">
         <input 
           type="text" 
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
           placeholder="Search products..." />
           className="w-full max-w-md rounded border border-gray-300 px-4 py-2 focus:outline-none"
       </div>
