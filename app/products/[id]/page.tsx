@@ -1,8 +1,12 @@
 import { stripe } from "@/lib/stripe"
 
-export default async function ProductPage({ params }: { params: { id: string } }) {
-  const product = stripe.products.retrieve(paramid, {
+export default async function ProductPage({ 
+  params 
+}: { 
+  params: { id: string } 
+}) {
+  const product = await stripe.products.retrieve(params.id, {
     expand: ["default_price"],
   })
-  return <ProductDetail />
+  return <ProductDetail product={product} />
 }
