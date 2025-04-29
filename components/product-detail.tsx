@@ -1,1 +1,9 @@
-export const ProductDetail = ()
+import Stripe from "stripe"
+
+interface Props {
+  product: Stripe.Product
+}
+
+export const ProductDetail = () => {
+  return <></>
+}
