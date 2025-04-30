@@ -25,15 +25,15 @@ export default function CheckoutPage() {
         </CardHeader>
         <CardContent>
           <ul>
-            {items.map((items, key) => (
+            {items.map((item, key) => (
               <li key={key}>
                 <div>
-                  <span>{items.name}</span>
-                  <span>${((items.price * items.quantity) / 100).toFixed(2)}</span>
+                  <span>{item.name}</span>
+                  <span>${((item.price * item.quantity) / 100).toFixed(2)}</span>
                 </div>
                 <div>
                   <Button variant="outline" onClick={() => removeItem(item.id)}> -</Button>
-                  <span className="text-lg font-semibold">{items.quantity}</span>
+                  <span className="text-lg font-semibold">{item.quantity}</span>
                   <Button onClick={() => addItem(item)}> +</Button>
                 </div>
               </li>
