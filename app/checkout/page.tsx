@@ -5,7 +5,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
 export default function CheckoutPage() {
-  const { items } = useCartStore()
+  const { items, addItem, removeItem } = useCartStore()
   const total = items.reduce((acc, item) => acc + item.price * item.quantity, 0)
 
   if (total === 0 || items.length === 0) {
@@ -32,9 +32,9 @@ export default function CheckoutPage() {
                   <span>${((items.price * items.quantity) / 100).toFixed(2)}</span>
                 </div>
                 <div>
-                  <Button variant="outline" onClick={() => removeItem(product.id)}> -</Button>
+                  <Button variant="outline" onClick={() => removeItem(item.id)}> -</Button>
                   <span className="text-lg font-semibold">{items.quantity}</span>
-                  <Button onClick={onAddItem}> +</Button>
+                  <Button onClick={() => addItem(item)}> +</Button>
                 </div>
               </li>
             ))}
