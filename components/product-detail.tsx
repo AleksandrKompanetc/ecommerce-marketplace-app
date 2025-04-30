@@ -1,5 +1,6 @@
 import Stripe from "stripe"
 import Image from "next/image"
+import { Button } from "./ui/button"
 
 interface Props {
   product: Stripe.Product
@@ -23,6 +24,19 @@ export const ProductDetail = ({product}: Props) => {
       )}
       <div>
         <h1>{product.name}</h1>
+        {product.description && <p>{product.description}</p>}
+
+        {price && price.unit_amount && (
+          <p className="text-lg font-semibold text-gray-900">
+            ${(price.unit_amount / 100).toFixed(2)}
+          </p>
+        )}
+
+        <div>
+          <Button variant="outline"> -</Button>
+          <span> 0</span>
+          <Button variant="outline"> +</Button>
+        </div>
       </div>
     </div>
   )

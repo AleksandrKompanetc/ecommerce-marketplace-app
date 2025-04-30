@@ -1,4 +1,5 @@
 import { stripe } from "@/lib/stripe"
+import { ProductDetail } from "@/components/product-detail"
 
 export default async function ProductPage({ 
   params 
