@@ -34,14 +34,19 @@ export default function CheckoutPage() {
                 <div>
                   <Button variant="outline" onClick={() => removeItem(item.id)}> -</Button>
                   <span className="text-lg font-semibold">{item.quantity}</span>
-                  <Button onClick={() => addItem({...item, quantity: 1})}> +</Button>
+                  <Button onClick={() => addItem({ ...item, quantity: 1 })}> +</Button>
                 </div>
               </li>
             ))}
           </ul>
-          <div>Total: ${(total / 100).toFixed(2)}</div>
+          <div className="mt-4 border-t pt-2 text-lg font-semibold">
+            Total: ${(total / 100).toFixed(2)}
+          </div>
         </CardContent>
       </Card>
+      <form>
+        <Button type="submit" variant="default" className="w-full">Proceed to Payment</Button>
+      </form>
     </div>
   )
 }
