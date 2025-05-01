@@ -5,7 +5,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
 export default function CheckoutPage() {
-  const { items, addItem, removeItem } = useCartStore()
+  const { items, addItem, removeItem, clearCart } = useCartStore()
   const total = items.reduce((acc, item) => acc + item.price * item.quantity, 0)
 
   if (total === 0 || items.length === 0) {
@@ -45,7 +45,12 @@ export default function CheckoutPage() {
         </CardContent>
       </Card>
       <form>
-        <Button type="submit" variant="default" className="w-full">Proceed to Payment</Button>
+        <Button type="submit" variant="default" className="w-full">
+          Proceed to Payment
+        </Button>
+        <Button onClick={() => clearCart()} variant="default" className="w-full">
+          Clear Cart
+        </Button>
       </form>
     </div>
   )
