@@ -1,5 +1,8 @@
+"use server"
+
 import { stripe } from "@/lib/stripe"
 import { CartItem } from "@/store/cart-store"
+import { redirect } from "next/navigation"
 
 export const checkoutAction = async (formData: FormData): Promise<void> => {
 
@@ -21,4 +24,6 @@ export const checkoutAction = async (formData: FormData): Promise<void> => {
     success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/`,
     cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/checkout`,
   })
+
+  redirect(session.url!)
 }
