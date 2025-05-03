@@ -30,50 +30,37 @@ export const Navbar = () => {
         </Link>
         <div className="hidden md:flex space-x-6">
           <Link href="/" className="hover:text-blue-600">Home</Link>
-          <Link href="/products" className="hover:text-blue-600">
-            Products
-          </Link>
-          <Link href="/checkout" className="hover:text-blue-600">
-            Checkout
-          </Link>
+          <Link href="/products" className="hover:text-blue-600">Products</Link>
+          <Link href="/checkout" className="hover:text-blue-600">Checkout</Link>
         </div>
         <div className="flex items-center space-x-4">
           <Link href="/checkout" className="relative">
             <ShoppingCartIcon className="h-6 w-6" />
-            {cartCount > 0 &&
-              <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center text-xs text-white rounded-lg bg-red-600">
+            {cartCount > 0 && (
+              <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center text-xs text-white rounded-full bg-red-600">
                 {cartCount}
               </span>
-            }
+            )}
           </Link>
           <Button
             variant="ghost"
             className="md:hidden"
-            onClick={() => setMobileOpen((prev) => !prev)}>
-            {mobileOpen && (
-              <div className="md:hidden bg-white shadow px-4 py-2 space-y-2">
-                <Link href="/" className="block hover:text-blue-600">Home</Link>
-                <Link href="/products" className="block hover:text-blue-600">Products</Link>
-                <Link href="/checkout" className="block hover:text-blue-600">Checkout</Link>
-              </div>
+            onClick={() => setMobileOpen((prev) => !prev)}
+          >
+            {mobileOpen ? (
+              <XMarkIcon className="h-6 w-6" />
+            ) : (
+              <Bars3Icon className="h-6 w-6" />
             )}
           </Button>
         </div>
       </div>
       {mobileOpen && (
-        <nav>
-          <ul>
-            <li>
-              <Link href={"/"}>Home</Link>
-            </li>
-            <li>
-              <Link href={"/products"}>Products</Link>
-            </li>
-            <li>
-              <Link href={"/checkout"}>Checkout</Link>
-            </li>
-          </ul>
-        </nav>
+        <div className="md:hidden bg-white shadow px-4 py-2 space-y-2">
+          <Link href="/" className="block hover:text-blue-600">Home</Link>
+          <Link href="/products" className="block hover:text-blue-600">Products</Link>
+          <Link href="/checkout" className="block hover:text-blue-600">Checkout</Link>
+        </div>
       )}
     </nav>
   )
