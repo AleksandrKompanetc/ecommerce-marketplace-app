@@ -3,6 +3,7 @@
 import Stripe from "stripe"
 import { ProductCard } from "./product-card"
 import { useState } from "react"
+import { useMemo } from "react"
 
 interface Props {
   products: Stripe.Product[]
@@ -12,13 +13,14 @@ export const ProductList = ({ products }: Props) => {
 
   const [searchTerm, setSearchTerm] = useState<string>("")
 
-  const filteredProducts = products.filter((product) => {
+  const filteredProducts = useMemo(() => {
     const term = searchTerm.toLowerCase()
-    const nameMatch = product.name.toLowerCase().includes(term)
-    const descriptionMatch = product.description ? product.description.toLowerCase().includes(term) : false
-
-    return nameMatch || descriptionMatch
-  })
+    return products.filter((product) => {
+      const nameMatch = product.name.toLowerCase().includes(term)
+      const descriptionMatch = product.description?.toLowerCase().includes(term)
+      return nameMatch || descriptionMatch
+    })
+  }, [searchTerm, products])
 
   return (
     <div>
