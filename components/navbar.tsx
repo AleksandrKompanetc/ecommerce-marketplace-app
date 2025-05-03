@@ -16,10 +16,10 @@ export const Navbar = () => {
       if (window.innerWidth >= 768) {
         setMobileOpen(false)
       }
-      window.addEventListener("resize", handleResize)
-
-      return () => window.removeEventListener("resize", handleResize)
     }
+  
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
   }, [])
 
   return (
