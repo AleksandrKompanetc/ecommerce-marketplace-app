@@ -13,22 +13,29 @@ export default async function Home() {
   })
 
   return (
-    <div className="text-blue-500">
-     <section>
-      <div>
+    <section className="py-8 px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <section>
         <div>
-          <h2>Welcome to My Ecommerce</h2>
-          <p>Discover the latest products at the best prices.</p>
-          <Button asChild variant = "default">
-            <Link href="/products">Browse All Products</Link>
-          </Button>
+          <div>
+            <h2>Welcome to My Ecommerce</h2>
+            <p>Discover the latest products at the best prices.</p>
+            <Button asChild variant="default">
+              <Link href="/products">Browse All Products</Link>
+            </Button>
+          </div>
+          <div className="relative w-[450px] h-[450px]">
+            <Image
+              alt="Banner Image"
+              src={products.data[0].images[0]}
+              fill
+              className="object-cover rounded-xl"
+            />
+          </div>
         </div>
-        <Image alt="Banner Image" width={450} height={450} src={products.data[0].images[0]} />
-      </div>
-     </section>
-     <section>
-      <Carousel products={products.data} />
-     </section>
-    </div>
+      </section>
+      <section>
+        <Carousel products={products.data} />
+      </section>
+    </section>
   );
 }
