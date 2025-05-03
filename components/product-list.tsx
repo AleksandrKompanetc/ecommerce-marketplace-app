@@ -23,19 +23,19 @@ export const ProductList = ({ products }: Props) => {
   return (
     <div>
       <div className="mb-6 flex justify-center">
-        <input 
-          type="text" 
+        <input
+          type="text"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           placeholder="Search products..."
-          className="w-full max-w-md rounded border border-gray-300 px-4 py-2 focus:outline-none"
+          className="w-full max-w-md rounded-md border border-gray-300 px-4 py-2 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:outline-none"
         />
       </div>
 
       <ul className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {filteredProducts.map((product, key) => {
           return (
-            <li key={key}>
+            <li key={product.id}>
               <ProductCard product={product} />
             </li>
           )
