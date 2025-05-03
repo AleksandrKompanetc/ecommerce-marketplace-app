@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Carousel } from "@/components/carousel";
 import Link from "next/link";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const products = await stripe.products.list({
     expand: ["data.default_price"],
