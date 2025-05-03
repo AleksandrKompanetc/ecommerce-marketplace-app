@@ -17,7 +17,7 @@ export const Navbar = () => {
         setMobileOpen(false)
       }
     }
-  
+
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize)
   }, [])
@@ -48,10 +48,12 @@ export const Navbar = () => {
             variant="ghost"
             className="md:hidden"
             onClick={() => setMobileOpen((prev) => !prev)}>
-            {mobileOpen ? (
-              <XMarkIcon className="h-6 w-6" />
-            ) : (
-              <Bars3Icon className="h-6 w-6" />
+            {mobileOpen && (
+              <div className="md:hidden bg-white shadow px-4 py-2 space-y-2">
+                <Link href="/" className="block hover:text-blue-600">Home</Link>
+                <Link href="/products" className="block hover:text-blue-600">Products</Link>
+                <Link href="/checkout" className="block hover:text-blue-600">Checkout</Link>
+              </div>
             )}
           </Button>
         </div>
