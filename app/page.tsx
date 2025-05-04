@@ -3,6 +3,7 @@ import { stripe } from "@/lib/stripe";
 import { Button } from "@/components/ui/button";
 import { Carousel } from "@/components/carousel";
 import Link from "next/link";
+import { Select } from "@/components/ui/select";
 
 export const dynamic = "force-dynamic";
 
@@ -21,6 +22,8 @@ export default async function Home() {
           <Button asChild variant="default">
             <Link href="/products">Browse All Products</Link>
           </Button>
+
+          <Select>New</Select>
         </div>
         <div className="relative w-[450px] h-[450px]">
           <Image

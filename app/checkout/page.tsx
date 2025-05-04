@@ -27,17 +27,17 @@ export default function CheckoutPage() {
         <CardContent>
           <ul>
             {items.map((item, key) => (
-              <li key={key}>
-                <div>
-                  <span>{item.name}</span>
-                  <span>${((item.price * item.quantity) / 100).toFixed(2)}</span>
-                </div>
-                <div>
-                  <Button variant="outline" onClick={() => removeItem(item.id)}> -</Button>
-                  <span className="text-lg font-semibold">{item.quantity}</span>
-                  <Button onClick={() => addItem({ ...item, quantity: 1 })}> +</Button>
-                </div>
-              </li>
+              <li key={key} className="flex justify-between items-center py-2 border-b">
+              <div>
+                <span className="block font-medium">{item.name}</span>
+                <span className="text-sm text-gray-600">${((item.price * item.quantity) / 100).toFixed(2)}</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Button variant="outline" onClick={() => removeItem(item.id)}>-</Button>
+                <span className="w-6 text-center">{item.quantity}</span>
+                <Button onClick={() => addItem({ ...item, quantity: 1 })}>+</Button>
+              </div>
+            </li>
             ))}
           </ul>
           <div className="mt-4 border-t pt-2 text-lg font-semibold">
