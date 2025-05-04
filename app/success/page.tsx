@@ -3,6 +3,11 @@
 import { useCartStore } from "@/store/cart-store";
 import Link from "next/link";
 import { useEffect } from "react";
+import { Button } from "@/components/ui/button"
+
+<Link href="/products">
+  <Button className="mt-4">Continue Shopping</Button>
+</Link>
 
 export default function SuccessPage() {
   const { clearCart } = useCartStore()
