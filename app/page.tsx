@@ -3,7 +3,13 @@ import { stripe } from "@/lib/stripe";
 import { Button } from "@/components/ui/button";
 import { Carousel } from "@/components/carousel";
 import Link from "next/link";
-import { Select } from "@/components/ui/select";
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+} from "@/components/ui/select";
 
 export const dynamic = "force-dynamic";
 
@@ -23,7 +29,16 @@ export default async function Home() {
             <Link href="/products">Browse All Products</Link>
           </Button>
 
-          <Select>New</Select>
+          <Select>
+            <SelectTrigger className="w-[180px]">
+              <SelectValue placeholder="Select a category" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="new">New</SelectItem>
+              <SelectItem value="popular">Popular</SelectItem>
+              <SelectItem value="sale">Sale</SelectItem>
+            </SelectContent>
+          </Select>
         </div>
         <div className="relative w-[450px] h-[450px]">
           <Image
